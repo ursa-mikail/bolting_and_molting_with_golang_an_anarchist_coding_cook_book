@@ -53,7 +53,9 @@ Content: Building networked applications, handling HTTP requests, and trying to 
 Content: Writing tests, debugging code, and chasing down elusive bugs. Spoiler: You’ll never catch them all.
 
 <hr>
+
 ![Antimatter Hypernucleus](https://latex.codecogs.com/png.latex?%7B%7D_%7B%5Cbar%7B%5CLambda%7D%7D%7B%7D%5E4%5Cmathrm%7B%5Cbar%7BH%7D%7D)
+
 <hr>
 
 # Chapter 13: Advanced Topics: Proceed At Your Own Risk
