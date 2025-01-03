@@ -2,7 +2,10 @@
 ## By `Mikail Eliyah` and `Gregory Tomasyk`
 
 [Under Construction] ... watch for it ... 
-2024-12-14_2141hr_44sec
+```
+2024-12-14_2141hr_44sec:	initial chapter designation
+2025-01-03_1256hr_06sec:	chapter 01 draft
+```
 
 # Chapter 1: Hello, World! Now What?
 ## "Starting Strong: Hello, World! and Other Lies"
