@@ -25,4 +25,15 @@ test-app # or example.com/demo
 % cd test-app 
 % go run main.go
 
+out:
 </pre>
+```
+Hello from util
+hello 9
+Hello World
+[]int
+
+
+ DefaultName
+Result: 33
+```
