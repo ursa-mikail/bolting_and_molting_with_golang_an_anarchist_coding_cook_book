@@ -22,7 +22,7 @@ func ExportToCSV() {
 	writer.Write([]string{"ID", "Description", "Status", "Priority"})
 	for _, task := range tasks {
 		writer.Write([]string{
-			strconv.Itoa(task.ID),
+			strconv.Itoa(task.ID),	# strconv.FormatUint(uint64(task.ID), 10) # base-10
 			task.Description,
 			task.Status,
 			task.Priority,
