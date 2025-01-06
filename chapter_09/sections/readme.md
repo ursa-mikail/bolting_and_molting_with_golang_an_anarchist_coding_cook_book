@@ -7,6 +7,7 @@ chmod +x make_go.sh
 # ./make_go.sh example.com/demo
 ./make_go.sh test-app
 
+For [01]:
 # Resulting Structure
 After running the script, the structure will look like this:
 
@@ -60,6 +61,43 @@ CSV Output (tasks.csv):
 ```
 ID,Description,Status,Priority
 1,Clean the kitchen,Pending,High
+```
+
+<pre>
+chmod +x make_go.sh
+# Run the script with your desired module name:
+# ./make_go.sh example.com/demo
+./make_go.sh test-app
+
+For [02]:
+# Resulting Structure
+task-assignment/
+├── main.go
+├── tasks/
+│   ├── task.go
+│   ├── manager.go
+│   ├── input.go
+
+out:
+</pre>
+```
+Welcome to the Task Assignment System.
+You can assign up to 10 tasks.
+
+Enter the assignee name:
+Alice
+Enter the task details:
+Complete the quarterly report.
+Task assigned to Alice: Complete the quarterly report (Task ID: 1)
+9 tasks remaining to assign.
+
+Enter the assignee name:
+Bob
+Enter the task details:
+Prepare the presentation for the client meeting.
+Task assigned to Bob: Prepare the presentation for the client meeting (Task ID: 2)
+8 tasks remaining to assign.
+
 ```
 
 
