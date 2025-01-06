@@ -2,12 +2,12 @@ package main
 
 import (
     "fmt"
-    "test-app/lib/p0"
-    "test-app/util"
+    "test-app/libs/p0"
+    "test-app/utils"
 )
 
 func main() {
-    fmt.Print(util.Hello() + "\n")
+    fmt.Print(utils.Hello() + "\n")
 
     // Introduce the theme
     fmt.Println("Welcome to 'Commitment Issues: Variables and Data Types'!")

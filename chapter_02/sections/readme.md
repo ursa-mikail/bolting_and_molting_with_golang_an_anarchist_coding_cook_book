@@ -31,11 +31,11 @@ After running the script, the structure will look like this:
 
 test-app # or example.com/demo
 ├── go.mod
-├── lib
+├── libs
 │   └── p0
 │       └── p0.go
 ├── main.go
-└── util
+└── utils
     └── util_00.go
 
 # modify the generated p0.go
@@ -43,13 +43,17 @@ test-app # or example.com/demo
 
 # test run:
 % cd test-app 
+# note: if you have multiple *.go on the same folder that is working with main.go: % go run .
+# here we have main.go referring to package `lib/p0` (`test-app/lib/p0`, as we define the module as `test-app`): 
 % go run main.go
+
+Note: To export a variable or make a function available for all packages in the app is to Capitalize the 1st letter of function name, e.g. p0.ExplainVariables() in main.go for `ExplainVariables()` from `lib/p0` is quite non-inituitive. 
 
 out:
 </pre>
 ```
 % go run main.go
-Hello from util
+Hello from utils
 Welcome to 'Commitment Issues: Variables and Data Types'!
 Today, we'll explore Golang's quirky variable and data type relationships.
 Commitment Issues: Why can't variables and types just get along?

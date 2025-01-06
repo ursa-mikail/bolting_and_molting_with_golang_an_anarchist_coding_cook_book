@@ -13,14 +13,14 @@ fi
 MODULE_NAME=$1
 
 # Create project structure
-mkdir -p "$MODULE_NAME/lib/p0" "$MODULE_NAME/util"
+mkdir -p "$MODULE_NAME/libs/p0" "$MODULE_NAME/util"
 
 # Create go.mod
 cd "$MODULE_NAME" || exit
 go mod init "$MODULE_NAME"
 
-# Create lib/p0/p0.go
-cat > lib/p0/p0.go <<EOF
+# Create libs/p0/p0.go
+cat > libs/p0/p0.go <<EOF
 package p0
 
 import "fmt"
@@ -41,9 +41,9 @@ func UseFunc(f func(int, int) int, a, b int) {
 }
 EOF
 
-# Create util/util_00.go
-cat > util/util_00.go <<EOF
-package util
+# Create utils/util_00.go
+cat > utils/util_00.go <<EOF
+package utils
 
 func Hello() string {
     return "Hello from util"
@@ -58,12 +58,12 @@ import (
     "fmt"
     "reflect"
 
-    "$MODULE_NAME/lib/p0"
-    "$MODULE_NAME/util"
+    "$MODULE_NAME/libs/p0"
+    "$MODULE_NAME/utils"
 )
 
 func main() {
-    fmt.Print(util.Hello() + "\\n")
+    fmt.Print(utils.Hello() + "\\n")
     fmt.Print("hello 9\\n")
 
     fmt.Println("Hello", p0.Xello())
