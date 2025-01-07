@@ -18,6 +18,19 @@ func AssignTask(assignee string, details string) {
 	fmt.Printf("%d tasks remaining to assign.\n", maxTasks-len(tasks))
 }
 
+// ListAllTasks lists all the assigned tasks
+func ListAllTasks() {
+	if len(tasks) == 0 {
+		fmt.Println("No tasks have been assigned yet.")
+		return
+	}
+
+	fmt.Println("List of Assigned Tasks:")
+	for _, task := range tasks {
+		fmt.Printf("Task ID: %d, Assignee: %s, Details: %s\n", task.ID, task.Assignee, task.Details)
+	}
+}
+
 // GreetUsers welcomes the user to the task assignment system
 func GreetUsers() {
 	fmt.Printf("Welcome to the Task Assignment System.\n")
