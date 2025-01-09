@@ -2,6 +2,7 @@
 We automate the scaffolding of the <a href="https://github.com/ursa-mikail/golang-gaia-basic-structure/tree/main"> golang-gaia-basic-structure</a>.
 
 <pre>
+[01]
 Each round involves a random sleep duration to simulate the work being done.
 The task functions are randomly selected for concurrent execution, and their execution times are logged.
 The program uses Go's concurrency model to execute multiple tasks in parallel.
@@ -67,4 +68,50 @@ Task Task3: Started at 2025-01-08 14:01:00.100234 +0000 UTC, Ended at 2025-01-08
 Task Task2: Started at 2025-01-08 14:01:00.100234 +0000 UTC, Ended at 2025-01-08 14:01:02.102234 +0000 UTC, Duration: 2.002000s
 All tasks completed.
 
+```
+
+<pre>
+[02]
+Uses Go's goroutines and channels for concurrency.
+Demonstrates basic inter-thread communication without complexity.
+Threads "talk" in turns, simulating a conversation.
+
+Channel for Communication:
+A messageChannel is created to allow the two threads to exchange messages.
+
+Thread 1:
+Generates 5 messages sequentially.
+Sends each message to messageChannel.
+Waits for a random delay between 500ms and 1s before sending the next message.
+
+Thread 2:
+Receives messages from messageChannel.
+Prints each received message and generates a response.
+Waits for a random delay between 500ms and 1s before processing the next message.
+
+Channel Closure:
+Once Thread 1 finishes sending all its messages, it closes the channel to signal Thread 2 that no more messages will be sent.
+
+Synchronization:
+Both threads are implicitly synchronized via the channel. Thread 2 processes each message as Thread 1 sends it.
+
+</pre>
+
+```
+Thread 1 says: Message 1
+Thread 2 received: Thread 1 says: Message 1
+Thread 2 responds to: Thread 1 says: Message 1
+Thread 1 says: Message 2
+Thread 2 received: Thread 1 says: Message 2
+Thread 2 responds to: Thread 1 says: Message 2
+Thread 1 says: Message 3
+Thread 2 received: Thread 1 says: Message 3
+Thread 2 responds to: Thread 1 says: Message 3
+Thread 1 says: Message 4
+Thread 2 received: Thread 1 says: Message 4
+Thread 2 responds to: Thread 1 says: Message 4
+Thread 1 says: Message 5
+Thread 2 received: Thread 1 says: Message 5
+Thread 2 responds to: Thread 1 says: Message 5
+Conversation between threads completed.
 ```
