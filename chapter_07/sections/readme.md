@@ -72,6 +72,8 @@ All tasks completed.
 
 <pre>
 [02]
+2 threads (goroutines) "talk" to each other by exchanging messages via a channel. Each thread sends and receives messages in a loop, simulating a basic conversation.
+
 Uses Go's goroutines and channels for concurrency.
 Demonstrates basic inter-thread communication without complexity.
 Threads "talk" in turns, simulating a conversation.
