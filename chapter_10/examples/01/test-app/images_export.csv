@@ -1,0 +1,2 @@
+id,name,contents,sha256,hmac,team,team_owner,status,status_signature,status_url
+1,example_image,new_data,50f1dbff1d70df7eae3d4a466961f17dcba50183b4549d89b7c73bb0b633b275,811ebc2542a1dbaa0fee20418bfbc25bd4e98c526c4263cdb6e1c6b00407fab3,team_b,owner_b,suspended,3eee95a67aca5ebc64b9f1aafb1ed629d75e408141c5f4d0c18e185658836491,https://example.com/cve-details

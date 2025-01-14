@@ -4,12 +4,12 @@ import (
     "fmt"
     "reflect"
 
-    "test-app/lib/p0"
-    "test-app/util"
+    "test-app/libs/p0"
+    "test-app/utils"
 )
 
 func main() {
-    fmt.Print(util.Hello() + "\n")
+    fmt.Print(utils.Hello() + "\n")
     fmt.Print("hello 9\n")
 
     fmt.Println("Hello", p0.Xello())
