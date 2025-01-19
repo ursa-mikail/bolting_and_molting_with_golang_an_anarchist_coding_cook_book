@@ -19,7 +19,7 @@ test-app # or example.com/demo
 └── util
     └── util_00.go
 
-# modify the generated main.go
+# modify the generated main.go, util_00.go
 
 # test run:
 % cd test-app 
@@ -36,4 +36,28 @@ Hello World
 
  DefaultName
 Result: 33
+
+Stock Symbol: XPP
+Initial Price: 1.93
+Current Price: 3.11
+Funds Invested: 5000.00
+Total Gains: 3056.99
+Status: Gain
+
+Stock Symbol: TSLA
+Initial Price: 100.00
+Current Price: 95.00
+Funds Invested: 2000.00
+Total Gains: -100.00
+Status: Loss
+
+Stock Symbol: MSFT
+Initial Price: 50.00
+Current Price: 60.00
+Funds Invested: 500.00
+Total Gains: 100.00
+Status: Gain
+
+Overall Total Gains/Loss: 3056.99
+Total Current Funds: $7500.00, Interest: $1.12, Future Value: $7501.12
 ```
