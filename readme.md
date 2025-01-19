@@ -9,6 +9,7 @@
 2025-01-08_1823hr_23sec:	chapter 07 draft
 2025-01-14_1204hr_57sec:	chapter 10 draft
 2025-01-18_2150hr_23sec:	chapter 04 draft
+2025-01-19_0908hr_29sec: 	chapter 03 and chapter 05 drafts
 ```
 
 # Chapter 1: Hello, World! Now What?

@@ -19,6 +19,14 @@ Usage: Handles different outcomes based on the bet and the roulette result.
 High Rollers Lounge: All-In-One Game
 Control: Combines if-else, for, and switch
 Usage: Includes a dice-based mini-game, slot machine spins, and bonus events.
+
+Enjoy the illusion of winning in the casino experience, but remember: the house always wins! 🎲🎰
+
+
+Lottery: A tax on people who are bad at math. - Ambrose Bierce (June 24, 1842 to 1914?) 
+
+The lottery is a tax on poor people and on people who can’t do math. Rich people and smart people would be in the line if the lottery were a real wealth-building tool, but the truth is that the lottery is a rip-off instituted by our government. This is not a moral position; it is a mathematical, statistical fact. Studies show that the zip codes that spend four times what anyone else does on lottery tickets are those in lower-income parts of town. The lottery, or gambling of any kind, offers false hope, not a ticket out. ― Dave Ramsey, The Total Money Makeover: A Proven Plan for Financial Fitness
+
 </pre>
 
 <pre>
