@@ -79,7 +79,7 @@ func runRemoteCommand(sshClient *ssh.Client, command string) (string, error) {
 }
 
 func main() {
-	host := os.Getenv("SSH_HOST") // e.g. "ubuntu@10.242.41.207"
+	host := os.Getenv("SSH_HOST") // e.g. "<user_id>@<ip_address>"
 	pass := os.Getenv("SSH_PASS") // optional
 	key := os.Getenv("SSH_KEY")   // optional
 	remoteDir := "~/cert_gen"
