@@ -1,5 +1,5 @@
 # Bolting And Molting With Golang: An Anarchist Coding Cook Book"
-## By `Gregory Tomasyk` and `Mikail Eliyah`
+## By `Gregory Tomasyk`, `Vijayendra Bhamidipati Venkata Siva` and `Mikail Eliyah`
 
 [Under Construction] ... watch for it ... 
 ```
