@@ -218,3 +218,24 @@ func computeSHA256(filename string) (string, error) {
 // on the remote: sudo apt update -y && sudo apt install -y python3-pip zip openssl && pip3 install cryptography
 // push_remote_agent.go
 // openssl dgst -sha256 certs_from_remote.zip
+
+/*
+.
+├── cert_gen
+│   ├── certs.zip
+│   ├── gen_certs
+│   │   ├── cert0.pem
+:
+│   │   ├── cert9.pem
+│   │   ├── key0.pem
+│   │   ├── key1.pem
+│   │   ├── key2.pem
+│   │   ├── key3.pem
+│   │   ├── key4.pem
+│   │   ├── key5.pem
+│   │   ├── key6.pem
+│   │   ├── key7.pem
+│   │   ├── key8.pem
+│   │   └── key9.pem
+│   └── gen_certs.py
+*/
