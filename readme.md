@@ -1,6 +1,8 @@
 # Bolting And Molting With Golang: An Anarchist Coding Cook Book"
 ## By `Gregory Tomasyk`, `Vijayendra Bhamidipati Venkata Siva` and `Mikail Eliyah`
 
+![book cover: Bolting And Molting With Golang: An Anarchist Coding Cook Book](book_cover.png)
+
 [Under Construction] ... watch for it ... 
 ```
 2024-12-14_2141hr_44sec:	initial chapter designation
