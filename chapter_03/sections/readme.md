@@ -1,5 +1,5 @@
 # Chapter 3: Control Structures — Because You’re Not in Control
-## "Control Freak: Ifs, Loops, and Other Delusions"
+## "Control Freak: Ifs, Loops, and Other Delusions" 
 
 Control structures promise you power. They hand you if, for, and switch—like you're the conductor of logic. But here’s the crux: you're not in control. The compiler, the runtime, the scheduler—they are. You write logic, but it doesn't guarantee behavior. Not consistently. Not deterministically. Not across all inputs.
 
