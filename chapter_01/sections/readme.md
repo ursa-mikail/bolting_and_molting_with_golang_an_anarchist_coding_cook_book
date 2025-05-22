@@ -49,9 +49,7 @@ Golang?
 💣 The Core Problem
 Every language promises simplicity, but reinvents another wheel - broken somewhere - until another crusade to do the same ITU (Inventing The Unnecessary). Imagine Dr Nobel Price inventing the talky stick ... 
 
-<video width="320" height="240" controls>
-    <a href="https://www.youtube.com/watch?v=Mflfp4VlEWo">Dr. Nobel Price's Talky Stick</a>
-</video>
+<a href="https://www.youtube.com/watch?v=Mflfp4VlEWo">Dr. Nobel Price's Talky Stick</a>
 
 Then comes the bloat. Then the frameworks. Then the gatekeeping.
 
@@ -90,15 +88,15 @@ It needs to remap syntax to a real problem. If it does not exist, extend. If it 
 A language should not be relearned, it should be minimal and ready to go. It should only extend if there is neo-lexeme required. 
 
 ---
+
 **Example**
 In German, there exists (∃) `Woher` (“From where?” (origin)) and `Wohin `( “To where?” (destination)), thence, `where-from` and `where-to`. These distinct spatial inquiries sharpen causal and temporal reasoning. 
+
 ---
 
 A language should be compact, not bigger—until it fits in your hand, in your brain, and in your damn ass.
 
-<video width="320" height="240" controls>
-    <a href="https://www.youtube.com/watch?v=7ppKzNTP2vQ">Mr. Dumass</a>
-</video>
+<a href="https://www.youtube.com/watch?v=7ppKzNTP2vQ">Mr. Dumass</a>
 
 <hr>
 
