@@ -16,7 +16,7 @@
 2025-02-20_2154hr_16sec:	chapter 08 and chapter 11 drafts
 2025-02-24_1702hr_04sec:	chapter 06 draft
 
-2025-05-21_1840hr_22sec:	drafted chapter 01, 02, 03, 04 (main chapters)
+2025-05-21_1840hr_22sec:	drafted chapter 01, 02, 03, 04, 05 (main chapters)
 ```
 
 # Chapter 1: Hello, World! Now What?
