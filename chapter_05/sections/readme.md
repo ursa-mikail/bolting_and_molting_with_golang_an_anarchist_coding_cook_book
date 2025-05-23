@@ -111,7 +111,7 @@ In many production systems:
 - Errors are aggregated (monitoring dashboards reduce signal)
 - Exception handling is generic (try { ... } catch (Exception e) {})
 
-In other words: the crime scene is scrubbed clean before you arrive ... and some murders are meant to look like - staged suicide. 
+In other words: the crime scene is scrubbed clean before you arrive ... and some murders are meant to look like - staged suicides. 
 
 ### 🧼 5. Errors Are Politically Dangerous
 Let’s not pretend:
