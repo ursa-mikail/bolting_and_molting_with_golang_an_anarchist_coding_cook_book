@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "rpc-tutorial/api";
+
+message Item {
+  string title = 1;
+  string body = 2;
+}
+
+message Empty {}
+
+message ItemList {
+  repeated Item items = 1;
+}
+
+service API {
+  rpc GetDB (Empty) returns (ItemList);
+  rpc GetByName (Item) returns (Item);
+  rpc AddItem (Item) returns (Item);
+  rpc EditItem (Item) returns (Item);
+  rpc DeleteItem (Item) returns (Item);
+}
