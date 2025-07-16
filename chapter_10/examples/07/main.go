@@ -31,4 +31,13 @@ secret: secret_000
 go mod init ursa
 go mod tidy
 go run main.go
+
+""" .env
+APP_PORT=8080
+DB_HOST=localhost
+DB_USER=admin
+DB_PASS="secret_000"
+
+# rename this file as `.env` for use by main.go
+"""
 */
