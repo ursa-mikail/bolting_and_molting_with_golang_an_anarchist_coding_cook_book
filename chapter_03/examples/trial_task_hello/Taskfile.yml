@@ -1,0 +1,37 @@
+version: '3'
+
+# application.name : trial_task_hello
+tasks:
+  build:
+    desc: Build the Go binary
+    cmds:
+      - go build -o trial_task_hello main.go
+
+  hello:
+    desc: Run Hello mode (default env = dev)
+    deps: [build]
+    cmds:
+      - ./trial_task_hello -mode=hello -env=dev
+
+  goodbye:
+    desc: Run Goodbye mode (env = prod)
+    deps: [build]
+    cmds:
+      - ./trial_task_hello -mode=goodbye -env=prod
+
+  hello:prod:
+    desc: Run Hello in production
+    deps: [build]
+    cmds:
+      - ./trial_task_hello -mode=hello -env=prod
+
+  goodbye:dev:
+    desc: Run Goodbye in development
+    deps: [build]
+    cmds:
+      - ./trial_task_hello -mode=goodbye -env=dev
+
+  clear_executable:
+    desc: Remove the compiled binary
+    cmds:
+      - rm -rf ./trial_task_hello
