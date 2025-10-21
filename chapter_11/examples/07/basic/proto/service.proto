@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "github.com/yourusername/grpc-example/proto";
+
+service SecureService {
+  rpc ProcessData (DataRequest) returns (DataResponse) {}
+}
+
+message DataRequest {
+  string data = 1;
+}
+
+message DataResponse {
+  string encrypted_data = 1;
+  bool success = 2;
+}

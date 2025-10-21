@@ -1,0 +1,16 @@
+message BatchDataRequest {
+  repeated string data = 1;
+}
+
+message BatchDataResponse {
+  repeated string encrypted_data = 1;
+  int32 success_count = 2;
+  int32 error_count = 3;
+  repeated string errors = 4;
+}
+
+// Add to service
+service SecureService {
+  rpc ProcessData (DataRequest) returns (DataResponse) {}
+  rpc ProcessBatchData (BatchDataRequest) returns (BatchDataResponse) {}
+}
