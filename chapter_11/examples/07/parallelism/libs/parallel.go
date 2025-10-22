@@ -15,22 +15,22 @@ func (fp *FileProcessor) ProcessParallel(chunks [][]byte, originalHash string) (
 	log.Println("Starting PARALLEL processing...")
 	start := time.Now()
 
-	var wg sync.WaitGroup
-	errCh := make(chan error, len(chunks))
+	var wg sync.WaitGroup					// ← SYNC: Tracks active goroutines
+	errCh := make(chan error, len(chunks))	// ← SYNC: Buffered channel for errors
 
 	decryptedChunks := make([][]byte, len(chunks))
 	chunkResults := make([]types.ChunkResult, len(chunks))
 	var successCount, failCount int
-	var mu sync.Mutex
+	var mu sync.Mutex						// ← SYNC: Protects shared data
 
 	for i, chunk := range chunks {
 		wg.Add(1)
-		go func(idx int, chunkData []byte) {
+		go func(idx int, chunkData []byte) { // ← PARALLELISM: Each chunk gets its own goroutine
 			defer wg.Done()
 
 			chunkResult := types.ChunkResult{Index: idx}
 			
-			encrypted, err := fp.CryptoService.EncryptChunk(chunkData)
+			encrypted, err := fp.CryptoService.EncryptChunk(chunkData) // ← PARALLELISM: All chunks encrypted simultaneously
 			if err != nil {
 				mu.Lock()
 				failCount++
@@ -42,7 +42,7 @@ func (fp *FileProcessor) ProcessParallel(chunks [][]byte, originalHash string) (
 				return
 			}
 
-			decrypted, err := fp.CryptoService.DecryptChunk(encrypted)
+			decrypted, err := fp.CryptoService.DecryptChunk(encrypted) // ← PARALLELISM: All chunks decrypted simultaneously
 			if err != nil {
 				mu.Lock()
 				failCount++
@@ -69,16 +69,16 @@ func (fp *FileProcessor) ProcessParallel(chunks [][]byte, originalHash string) (
 			chunkResult.Success = true
 			chunkResults[idx] = chunkResult
 			
-			mu.Lock()
+			mu.Lock()		// ← SYNC: Critical section begins
 			successCount++
-			mu.Unlock()
+			mu.Unlock()		// ← SYNC: Critical section ends
 		}(i, chunk)
 	}
 
-	wg.Wait()
+	wg.Wait()				// ← SYNC: Blocks until all goroutines complete
 	close(errCh)
 
-	for err := range errCh {
+	for err := range errCh {	// ← SYNC: Collects errors from all goroutines
 		if err != nil {
 			log.Printf("Error in goroutine: %v", err)
 		}
