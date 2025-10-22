@@ -15,6 +15,16 @@ type CryptoService struct {
 }
 
 func NewCryptoService(key []byte) *CryptoService {
+	// Ensure key is proper length for AES-256 (32 bytes)
+	if len(key) != 32 {
+		// Pad or truncate key to 32 bytes
+		paddedKey := make([]byte, 32)
+		copy(paddedKey, key)
+		if len(key) > 32 {
+			copy(paddedKey, key[:32])
+		}
+		return &CryptoService{key: paddedKey}
+	}
 	return &CryptoService{key: key}
 }
 
@@ -30,7 +40,7 @@ func (c *CryptoService) EncryptChunk(data []byte) ([]byte, error) {
 	}
 
 	nonce := make([]byte, gcm.NonceSize())
-	if _, err = io.ReadFull(rand.Reader, nonce); err != nil {
+	if _, err := io.ReadFull(rand.Reader, nonce); err != nil {
 		return nil, err
 	}
 

@@ -55,6 +55,16 @@ make clean && make build && make test
 ```
 
 ```
+% go run test_crypto.go
+Testing crypto service:
+Key length: 35
+Test data: Hello, World!
+Encrypted: 41 bytes
+Decrypted: Hello, World!
+✓ Crypto test PASSED
+```
+
+```
 % make run
 Building parallelism... 
 go build -o parallelism main.go

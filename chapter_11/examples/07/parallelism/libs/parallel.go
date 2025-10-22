@@ -75,7 +75,7 @@ func (fp *FileProcessor) ProcessParallel(chunks [][]byte, originalHash string) (
 		}(i, chunk)
 	}
 
-	wg.Wait()				// ← SYNC: Blocks until all goroutines complete
+	wg.Wait()				// ← SYNC: Blocks until all goroutines complete (Synchronization barrier ensuring all work completes)
 	close(errCh)
 
 	for err := range errCh {	// ← SYNC: Collects errors from all goroutines
