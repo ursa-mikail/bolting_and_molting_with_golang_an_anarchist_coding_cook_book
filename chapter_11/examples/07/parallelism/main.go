@@ -26,7 +26,7 @@ func main() {
 	chunks := fp.SplitIntoChunks(zipData)
 
 	// Step 3: Process chunks SERIALLY
-	log.Println("\n" + "============================================================")
+	log.Println("============================================================")
 	log.Println("SERIAL PROCESSING (Sequential For Loop)")
 	log.Println("============================================================")
 	
@@ -38,7 +38,7 @@ func main() {
 	serialTotalTime := time.Since(serialStart)
 
 	// Step 4: Process chunks in PARALLEL
-	log.Println("\n" + "============================================================")
+	log.Println("============================================================")
 	log.Println("PARALLEL PROCESSING (Goroutines with Sync)")
 	log.Println("============================================================")
 	
@@ -50,7 +50,7 @@ func main() {
 	parallelTotalTime := time.Since(parallelStart)
 
 	// Step 5: Display Results
-	log.Println("\n" + "============================================================")
+	log.Println("============================================================")
 	log.Println("RESULTS COMPARISON")
 	log.Println("============================================================")
 	
@@ -58,7 +58,7 @@ func main() {
 		serialTotalTime, parallelTotalTime, len(zipData))
 
 	// Step 6: Parallelism Insights
-	log.Println("\n" + "============================================================")
+	log.Println("============================================================")
 	log.Println("PARALLELISM ANALYSIS")
 	log.Println("============================================================")
 	analyzeParallelism(chunks, serialResult, parallelResult)
@@ -75,7 +75,7 @@ func displayResults(serial, parallel *types.ProcessingResult,
 	log.Printf("  🚀 Processing Speed: %.2f MB/s", serial.Stats.SpeedMBPerSecond)
 	log.Printf("  🚀 Total Speed: %.2f MB/s", libs.CalculateSpeed(dataSize, serialTotal))
 
-	log.Printf("\nPARALLEL PROCESSING:")
+	log.Printf("PARALLEL PROCESSING:")
 	log.Printf("  ✓ Integrity Verified: %t", parallel.IntegrityVerified)
 	log.Printf("  ✓ Chunks: %d successful, %d failed", parallel.Stats.SuccessfulChunks, parallel.Stats.FailedChunks)
 	log.Printf("  ⏱️  Pure Processing Time: %v", parallelDur)
