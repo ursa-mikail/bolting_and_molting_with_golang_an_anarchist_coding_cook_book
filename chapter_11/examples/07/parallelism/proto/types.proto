@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package processor;
+
+option go_package = "file-processor/proto";
+
+message ProcessingStats {
+  int32 total_chunks = 1;
+  int32 successful_chunks = 2;
+  int32 failed_chunks = 3;
+  double processing_time_seconds = 4;
+  double speed_mb_per_second = 5;
+}
+
+message Chunk {
+  int32 index = 1;
+  bytes data = 2;
+  bytes encrypted_data = 3;
+  bytes decrypted_data = 4;
+  string error = 5;
+}
+
+message ProcessingResult {
+  repeated Chunk chunks = 1;
+  string original_hash = 2;
+  string reconstructed_hash = 3;
+  bool integrity_verified = 4;
+  ProcessingStats stats = 5;
+}
